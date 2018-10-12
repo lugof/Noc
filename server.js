@@ -23,7 +23,9 @@ app.get('/', function (req, res) {
 res.sendFile(__dirname + '/index.html');
 });
 
-var watchList = ['Apple', 'Banana', 'Vanilla', 'Recipe'];
+
+
+var watchList = ['Katy Perry', 'Eminem', 'Selena Gomez', 'Taylor Swift'];
  var T = new Twit({
     consumer_key:         process.env.CONSUMER_KEY
   , consumer_secret:      process.env.CONSUMER_SECRET
