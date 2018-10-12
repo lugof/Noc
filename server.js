@@ -17,25 +17,25 @@ var express = require('express')
 
   server.listen(process.env.PORT || 5000);
 
+  var qterm="Katy Perry";
 
 // routing
 app.get('/', function (req, res) {
 res.sendFile(__dirname + '/index.html');
 });
 
-var watchList = ['Apple', 'Banana', 'Vanilla', 'Recipe'];
+var watchList = {q: qterm, result_type: "mixed"};
  var T = new Twit({
     consumer_key:         process.env.CONSUMER_KEY
   , consumer_secret:      process.env.CONSUMER_SECRET
-  , access_token:         process.env.ACCESS_TOKEN
-  , access_token_secret:  process.env.ACCESS_TOKEN_SECRET
+  , bearer_token:         process.env.BEARER_TOKEN
 })
 
 io.sockets.on('connection', function (socket) {
   console.log('Connected');
 
 
- var stream = T.stream('statuses/filter', { track: watchList })
+ var stream = T.stream('search/tweets.json', { track: watchList })
 
   stream.on('tweet', function (tweet) {
 
