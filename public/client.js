@@ -5,13 +5,14 @@ $(function(){
   socket.on('stream', function(tweet) {
 
     
-       twttr.widgets.createTweet(tweet,document.getElementById('container')
+    var x=   twttr.widgets.createTweet(tweet,document.getElementById('container')
         
         
         
       ).then( function(){
 
-        twttr.widgets.createTweet(tweet,document.getElementById('container'));
+        $('body').append('<div class="tweet">' + x + '</div>');
+
          console.log('Tweet added.');
     
 });
@@ -20,7 +21,7 @@ $(function(){
 
 
 /*
-$('body').append('<div class="tweet">' + tweet + '</div>');
+
 
 twttr.ready( function (twttr) {
   twttr.widgets.createTweet.then(
