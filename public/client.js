@@ -11,7 +11,7 @@ $(function(){
 arr2.push(tweet);
 console.log(arr2);
 
-      i++;
+    
 
 });
 });
