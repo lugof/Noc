@@ -3,14 +3,16 @@
 $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
+
     
-    
-        $('body').append('<div class="tweet">' + twttr.widgets.createTweet(tweet)+ '</div>'
+        $('body').append('<div class="tweet">' + twttr.widgets.createTweet(tweet,document.getElementById('container'))+ '</div>'
         
         
         
-      ).then( function( el ) {
-    console.log('Tweet added.');
+      ).then( function(){
+
+        twttr.widgets.createTweet(tweet,document.getElementById('container'));
+         console.log('Tweet added.');
     
 });
 });
