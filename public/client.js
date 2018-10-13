@@ -6,20 +6,11 @@ $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
 
-   $('body').append('<div class="tweet">' + tweet + '</div>'
-
-   
-        
-        
-      ).then( function(){
-
-       
-
-         console.log('Tweet added.');
+   $('body').append('<div class="tweet">' + tweet + '</div>')
     
 });
 });
-  });
+  
 
 
 

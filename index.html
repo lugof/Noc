@@ -38,21 +38,33 @@
 <script>
   
  
+var arr2=[];
+console.log(arr2[0]);
+for(i=0;i<200000;i++){
+
+if(arr2[0]=!"undefined"){
+console.log("dentro del if del arreglo");
+
+
+
+
 
 
 
 twttr.ready( function (twttr) {
   twttr.widgets.createTweet(
-    tweet,
+    arr2[0],
     document.getElementById('container')
     
     
     
   ).then( function( el ) {
 console.log('Tweet added.');
+  }
+  );
+  });
 }
-);
-});
+}
 
 </script>
 
