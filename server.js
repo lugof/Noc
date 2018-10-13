@@ -41,8 +41,8 @@ io.sockets.on('connection', function (socket) {
 
   stream.on('tweet', function (tweet) {
 
-    io.sockets.emit('stream',tweet.id);
-    console.log(tweet.id);
+    io.sockets.emit('stream',tweet.id_str);
+    console.log(tweet.id_str);
 
   });
  });
