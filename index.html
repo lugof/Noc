@@ -33,7 +33,20 @@
   <div id="container"></div>
 <div id="twitter-wjs"></div>
   
-
+<script>
+twttr.ready( function (twttr) {
+  twttr.widgets.createTweet.then(
+    "20",
+    document.getElementById('container')
+    
+    
+    
+  ).then( function( el ) {
+console.log('Tweet added.');
+}
+);
+});
+</script>
 
 
  
