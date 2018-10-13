@@ -1,20 +1,17 @@
 
+var arr2=[];
 $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
     
-   
-        $('body').append('<div class="tweet">' + twttr.widgets.createTweet(tweet,document.getElementById('container'))+ '</div>'
-        
-        
-      ).then( function( el ) {
-  console.log('Tweet added.');
-  }
-);
+
+
+    $('body').append('<div class="tweet">' + tweet + '</div>');
+
+arr2.push(tweet);
+console.log(arr2);
+
+      i++;
+
 });
-
-
-
-   // console.log(tweet);
-    //$('body').append('<div class="tweet">' + tweet + '</div>');
 });
