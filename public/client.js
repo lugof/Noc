@@ -4,14 +4,13 @@ $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
 
+    $('body').append('<div class="tweet">' + x + '</div>'
     
-    var x=   twttr.widgets.createTweet(tweet,document.getElementById('container')
-        
         
         
       ).then( function(){
 
-        $('body').append('<div class="tweet">' + x + '</div>');
+        console.log(tweet);
 
          console.log('Tweet added.');
     
