@@ -1,11 +1,10 @@
+twttr.ready( function (twttr) {
 $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
-    twttr.ready( function (twttr) {
-      twttr.widgets.createTweet(
-        tweet,
-        document.getElementById('container')
-        
+    
+   
+        $('body').append('<div class="tweet">' + twttr.widgets.createTweet(tweet,document.getElementById('container'))+ '</div>'
         
         
       ).then( function( el ) {
