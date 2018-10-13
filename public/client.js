@@ -1,5 +1,5 @@
 
-var arr2=[];
+
 $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
