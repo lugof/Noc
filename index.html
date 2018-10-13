@@ -41,9 +41,10 @@
 
 
 $("#container").on("click", function(event) {
+  for(i=0; i<10; i++){
 twttr.ready( function (twttr) {
   twttr.widgets.createTweet(
-    arr2[0],
+    arr2[i],
     document.getElementById('container')
     
     
@@ -53,7 +54,13 @@ console.log('Tweet added.');
   }
   );
   });
+}
 })
+
+
+
+
+
 
 
 </script>
