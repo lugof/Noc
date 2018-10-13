@@ -21,17 +21,11 @@ $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
 
-    
-      twttr.widgets.createTweet(
-        tweet,
-        document.getElementById('container')
+    var promise1 = Promise.resolve(twttr.widgets.createTweet(tweet,document.getElementById('container'),{theme: 'dark'} ));
+      promise1.then( function(value) {
+        console.log(value);
         
-        
-        
-      ).then( function( el ) {
-        twttr.widgets.load(
-          document.getElementById("container")
-        );
+      });
       }
       );
       });
@@ -43,7 +37,7 @@ $(function(){
    //$('body').append('<div class="tweet">' + tweet + '</div>')
   
     
-});
+
   
 
 
