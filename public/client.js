@@ -5,7 +5,7 @@ $(function(){
   socket.on('stream', function(tweet) {
     
     twttr.ready( function (twttr) {
-      twttr.widgets.createTweet.then(
+      twttr.widgets.createTweet(
         tweet,
         document.getElementById('container')
         
