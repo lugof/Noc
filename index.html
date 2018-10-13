@@ -38,15 +38,15 @@
 <script>
   
  var arr2=[];
-
+var i=0;
 
 $("#container").on("click", function(event) {
 
-  for(var i=0; i<10; i++){
+  for(i; i<10; i++){
     console.log("el valor del arreglo en iteracion  "+i+ "es: " +arr2[i]);
 twttr.ready( function (twttr) {
   twttr.widgets.createTweet(
-    arr2[5],
+    arr2[i],
     document.getElementById('container')
     
     
