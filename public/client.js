@@ -1,4 +1,4 @@
-twttr.ready( function (twttr) {
+
 $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
@@ -17,5 +17,4 @@ $(function(){
 
    // console.log(tweet);
     //$('body').append('<div class="tweet">' + tweet + '</div>');
-});
 });
