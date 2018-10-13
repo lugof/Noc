@@ -4,27 +4,18 @@ $(function(){
   var socket = io.connect();
   socket.on('stream', function(tweet) {
     
-    twttr.ready( function (twttr) {
-      twttr.widgets.createTweet(
-        tweet,
-        document.getElementById('container')
+    
+        $('body').append('<div class="tweet">' + twttr.widgets.createTweet(tweet)+ '</div>'
         
         
         
       ).then( function( el ) {
     console.log('Tweet added.');
-
     
-
-arr2.push(tweet);
-console.log(arr2);
-
-      
-
 });
 });
   });
-})
+
 
 /*
 $('body').append('<div class="tweet">' + tweet + '</div>');
