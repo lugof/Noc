@@ -23,15 +23,16 @@ $(function(){
 
    // $('body').append('<div class="tweet">' + tweet + '</div>');
 
-    twttr.widgets.createTweet(
+   console.log(tweet);
+  var x= twttr.widgets.createTweet(
       tweet,
       document.getElementById('container')
-    
+      
         
         
       ).then( function(){
 
-        console.log(tweet);
+        console.log(x);
 
          console.log('Tweet added.');
     
